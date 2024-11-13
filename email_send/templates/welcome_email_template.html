@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to WildVision!</title>
+    <style>
+        /* Inline CSS for better email client compatibility */
+        body {{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }}
+        .container {{
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }}
+        .header {{
+            text-align: center;
+            padding-bottom: 20px;
+        }}
+        .header img {{
+            max-width: 150px;
+        }}
+        .content {{
+            line-height: 1.6;
+        }}
+        .content h2 {{
+            color: #333333;
+        }}
+        .content ul {{
+            list-style-type: disc;
+            padding-left: 20px;
+        }}
+        .content li {{
+            margin-bottom: 10px;
+        }}
+        .footer {{
+            text-align: center;
+            font-size: 12px;
+            color: #777777;
+            margin-top: 20px;
+        }}
+        .button {{
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }}
+        @media only screen and (max-width: 600px) {{
+            .container {{
+                margin: 10px;
+                padding: 15px;
+            }}
+            .header img {{
+                max-width: 120px;
+            }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="templates/IMG_0192_black.png" alt="WildVision Logo">
+            <a href=https://wildvision.onrender.com/" class="button">Go To WildVision</a>
+        </div>
+        <div class="content">
+            <h2>Welcome to WildVision, {first_name}!</h2>
+            <p>We're thrilled to have you join our community. To help you get started, here are some tips and tricks to make the most out of WildVision:</p>
+            
+            <h3>Getting Started</h3>
+            <ul>
+                <li><strong>Animal Behaviour Insights:</strong> WildVisions animal movements layer give you insight into Deer, Tahr and Chammois movement levels, so you can target your hunts when animals are most likely to be see.</li>
+                <li><strong>Animal Location Insights:</strong> WildVisions animal location layers give you insight into the distribution and densities of big game animals in New Zealand, so you can target spots with high animal numbers.</li>
+                <li><strong>Weather Forecasting:</strong> WildVision provides weather forecasting helping you plan your hunt within the WildVision platform, and easily locate where the weather is best for each 3 day forecast.</li>
+            </ul>
+            
+            <h3>Pro Tips</h3>
+            <ul>
+                <li><strong>Create a Spot:</strong> Add your favourite spots to the WildVision map to recieve notifications on when the conditions are best to go! <a href="https://yourdomain.com/shortcuts">here</a>.</li>
+                <li><strong>Add Animal Observations:</strong> Adding animal observations to your WildVision map will help you keep track of where you have seen animals/li>
+                    <!-- , while also training wildvision to let you know where animals you have sighted in the past, will be in the future. Learn more about this here -->
+            </ul>
+            
+            <h3>Need Help?</h3>
+            <p>If you have any questions or need assistance, our support team is here to help. Email info@wildvisionai.com for all queries
+            
+        </div>
+        <div class="footer">
+            &copy; {year} WildVision. All rights reserved.<br/>
+            <a href="https://yourdomain.com/unsubscribe" style="color: #777777;">Unsubscribe</a>
+        </div>
+    </div>
+</body>
+</html>
