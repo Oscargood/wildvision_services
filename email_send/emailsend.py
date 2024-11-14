@@ -100,12 +100,15 @@ def process_users(users_collection):
     query = {'$or': [{'welcome_email_sent': {'$exists': False}}, {'welcome_email_sent': False}]}
 
     try:
-        users_to_email = users_collection.find(query)
-        count = users_to_email.count_documents({})
+        # Count the number of users matching the query directly from the collection
+        count = users_collection.count_documents(query)
         if count == 0:
             logging.info("No new users to send emails to.")
             return
         logging.info(f"Found {count} users to send welcome emails to.")
+
+        # Fetch the users to email
+        users_to_email = users_collection.find(query)
     except Exception as e:
         logging.error(f"Error querying users: {e}")
         sys.exit(1)
@@ -132,6 +135,7 @@ def process_users(users_collection):
                 logging.error(f"Failed to update user {email} as emailed: {e}")
         else:
             logging.error(f"Failed to send email to {email}. Will retry in next run.")
+
 
 def main():
     """Main function to handle command-line arguments and execute appropriate actions."""
